@@ -5,6 +5,7 @@
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
           var gitRepos = JSON.parse(this.responseText);
+          console.log(gitRepos)
            
           const gitRepoParent = document.getElementById('git-repos');
           
@@ -22,7 +23,7 @@
     };
     
     xhttp.open("GET", "https://api.github.com/user/repos", true);
-    xhttp.setRequestHeader("Authorization", "token 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");
+    xhttp.setRequestHeader("Authorization", "token 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");
     xhttp.send();
   } catch (error) {
     console.log(error);
